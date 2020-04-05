@@ -56,7 +56,7 @@ Then handle the result as you see fit:
 ```
 
 If the request was a success, you can inspect the status code
-and the response body (decoded from JSON into an Aeson 'Value'):
+and the response body (decoded from JSON into an Aeson `Value`):
 
 ```
     Right r ->
@@ -65,7 +65,7 @@ and the response body (decoded from JSON into an Aeson 'Value'):
       in putStrLn $ (show code) ++ ": " ++ (show body) 
 ```
 
-If the request returned an error, you can inspect it:
+If the request returned an `Error`, you can inspect/match on it:
 
 ```
     Left e ->
