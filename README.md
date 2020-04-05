@@ -98,8 +98,8 @@ and the value are each `Text`. For example:
 
 To send JSON data in the body of the request, first encode your data
 into JSON (so it is a bytestring). For example, suppose we have some
-important type of data that can be encoded as JSON (i.e., is an
-instance of Aeson's 'ToJSON' type class):
+important type of data that can be encoded as JSON (that is to say, it is an
+instance of Aeson's `ToJSON` type class):
 
 ```
 data ImportantData = ImportantData
@@ -109,7 +109,7 @@ data ImportantData = ImportantData
 
 instance J.ToJSON ImportantData
 instance J.FromJSON ImportantData
-``
+```
 
 First encode your data:
 
@@ -120,6 +120,7 @@ First encode your data:
 
 Then add it to a request:
 
+```
   let request = C.Request
         { C.requestMethod = C.POST
         , C.requestUrl = https "httpbin.org" /: "post"
