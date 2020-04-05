@@ -16,7 +16,7 @@ module Main (main) where
 
 import qualified GHC.Generics as G
 import qualified Data.Aeson as J
-import Network.HTTP.Req (http, https, /:)
+import Network.HTTP.Req (http, https, (/:))
 import qualified Network.HTTP.Curling.Client as C
 
 main :: IO ()
